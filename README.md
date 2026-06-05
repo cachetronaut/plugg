@@ -1,5 +1,10 @@
 # Plugg
 
+<p align="center">
+  <img src="docs/assets/logo.png" alt="Plugg logo" width="240">
+</p>
+
+
 Neutral authentication port for agent-fabric primitives: resolves opaque credentials into fabric principals without vendor identity leakage.
 
 Plugg is a primitive with TypeScript and Python implementations maintained in one public repository. The shared repo keeps the public contract, fixtures, issues, and release history aligned across languages.
