@@ -1,0 +1,73 @@
+{
+  "name": "@cachetronaut/plugg",
+  "version": "0.0.0",
+  "description": "Neutral authentication port for agent-fabric primitives: resolves opaque credentials into fabric principals without vendor identity leakage.",
+  "keywords": [
+    "plugg",
+    "agent-fabric",
+    "principal",
+    "authentication",
+    "identity",
+    "typescript",
+    "esm"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cachetronaut/plugg.git"
+  },
+  "homepage": "https://github.com/cachetronaut/plugg#readme",
+  "bugs": {
+    "url": "https://github.com/cachetronaut/plugg/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "build": "tsup",
+    "prepack": "pnpm build",
+    "prepublishOnly": "pnpm verify && pnpm build",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "verify": "pnpm check && pnpm typecheck && pnpm test"
+  },
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "current",
+        "darwin"
+      ],
+      "cpu": [
+        "current",
+        "arm64"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

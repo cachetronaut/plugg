@@ -1,0 +1,8 @@
+{
+  "id": "principal_user_01",
+  "kind": "user",
+  "claims": {
+    "org": "org_demo",
+    "roles": ["developer", "operator"]
+  }
+}
